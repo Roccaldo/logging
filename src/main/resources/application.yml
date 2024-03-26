@@ -1,0 +1,27 @@
+# ==============================================================
+# console colorata ANSI
+# ==============================================================
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+# ==============================================================
+# = Proprietà Livello Log e creazione file log
+# = Default ERROR, WARN e INFO
+# = Levels: TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF
+# ==============================================================
+logging:
+  file:
+    name: FileLog.log
+    max-size: 5MB
+    #path: "/logs"
+  pattern:
+    file: "%d{ dd-MM-yyyy } [%thread] %-5level %logger{36} - %msg%n"
+    #console: "%d{dd-MM-yyyy HH:mm:ss} - %msg%n"
+  # Livello del Log generale
+  level:
+    root: INFO
+    com.example.logging.services: DEBUG
+
+FirstVariable: 2
+SecondVariable: 8
